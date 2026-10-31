@@ -15,7 +15,9 @@ COPY . /var/www/html/
 
 ENV CAMPUSPRO_DATA_DIR=/var/data
 
-RUN mkdir -p /var/data/uploads/content /var/data/uploads/fees /var/data/campuspro_sessions \
+RUN mkdir -p /var/data/uploads/content \
+    /var/data/uploads/fees \
+    /var/data/campuspro_sessions \
     && chown -R www-data:www-data /var/data \
     && chown -R www-data:www-data /var/www/html
 
